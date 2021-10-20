@@ -1,4 +1,4 @@
-# JC Concept Sodiac Naming algorith
+# JC Concept Sodiac Naming algorithm
 
 This is a platform to sell the named book using paystack payment gateway.
 

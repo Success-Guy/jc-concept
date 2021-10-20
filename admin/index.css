@@ -1,0 +1,109 @@
+@import 'style.css';
+.text-center{
+    text-align: center;
+}
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+.body-co {
+    width: 90%;
+    align-self: center;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    box-shadow: 4px 4px 18px rgba(27, 38, 59, .8);
+}
+.detail {
+    margin-bottom: .5rem;
+    display: flex;
+    /*width: 500px;*/
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+    color: #333;
+    font-size: 16px;
+}
+.detail .name{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.detail .value{
+    text-align: center;
+
+}
+.detail .description{
+    text-align: left;
+    margin: 4px 12px;
+}
+button[disabled]{
+    background-color: #999;
+}
+/* index page */
+.body-col {
+    width: 80%;
+    align-self: center;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: rgb(27, 38, 59);
+    border-radius: 15px;
+    animation: popup 1s;
+    box-shadow: 4px 4px 18px rgba(27, 38, 59, .8);
+}
+
+.login-form {
+    margin-bottom: .5rem;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.log-input-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.log-input-group:last-child {
+    margin-bottom: 0;
+}
+
+.log-input-group label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.log-input-group input, .log-input-group select {
+    outline: none;
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1em;
+    padding: .5em;
+    color: white;
+    border-radius: 5px;
+}
+
+.log-input-group input:focus,
+.log-input-group input:hover,
+.log-input-group select:focus,
+.log-input-group select:hover {
+    border-color: rgb(10, 240, 48);
+}

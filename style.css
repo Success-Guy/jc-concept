@@ -1,0 +1,138 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Tahoma", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.body {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	font-size: 12px;
+}
+
+header, footer {
+	background-color: rgb(28, 27, 59);
+}
+
+.navbar {
+	align-items: center;
+	height: 50px;
+	font-size: .85rem;
+	color: rgb(10, 240, 48);
+	padding: 1rem;
+}
+
+.navbar-brand {
+	font-family: "Garamond,Times New Roman", Georgia;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.navbar a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.navbar a:hover, .sub-list a:hover {
+	color: rgb(210, 231, 214);
+	text-decoration: underline;
+}
+
+.navbar-nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	list-style-type: none;
+}
+
+.nav-item {
+	padding-right: 1rem;
+}
+
+.container {
+	min-width: 98%;
+	max-width: 1000px;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+
+section {
+	flex-grow: 1;
+	display: flex;
+}
+
+.main-body {
+	flex-grow: 1;
+}
+
+.list-group {
+	list-style: none;
+	text-align: left;
+	flex-grow: 1;
+	color: rgb(240, 255, 240);
+}
+
+.list-group li {
+	padding: .25rem;
+	font-size: 1.25rem;
+}
+
+.sub-list li {
+	text-align: center;
+	list-style: disc;
+	padding: 2px;
+	color: rgb(10, 240, 48);
+	font-size: 14px;
+}
+
+.sub-list li a {
+	color: white;
+}
+
+.left-col {
+	flex-grow: 1;
+	display: flex;
+	background-color: rgb(28, 27, 59);
+	margin: 1px 0 1px;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.list-group a {
+	color: rgb(10, 240, 48);
+	text-decoration: none;
+}
+
+.main-col {
+	flex-grow: 5;
+	/* align-self: center; */
+	margin-left: 1rem;
+	background-color: inherit;
+}
+
+/* form style */
+
+.btn {
+	color: rgb(255, 255, 255);
+	background-color: rgb(46, 56, 82);
+	padding: .75rem 1.5rem;
+	border-radius: .5rem;
+	text-decoration: none;
+	font-size: .9rem;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	height: 42px;
+}
+
+.btn:hover {
+	border: 1px solid rgb(10, 240, 48);
+}

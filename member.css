@@ -1,0 +1,165 @@
+@import 'style.css';
+
+.user-list {
+    padding: 2rem .2rem;
+    width: 90%;
+}
+
+.list-user {
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    background-color: rgb(243, 240, 240);
+    border-radius: 5px;
+}
+
+.list-user:last-child {
+    background-color: inherit;
+    border-width: 0;
+}
+
+.list-user label {
+    flex-grow: 2;
+    font-weight: bold;
+    text-align: left;
+}
+
+.list-user .bank {
+    flex-grow: 0;
+    width: 30%;
+    text-align: left;
+    margin-right: 2rem;
+}
+
+.list-user .bank span {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.list-user input {
+    outline: none;
+    background: none;
+    border: 1px solid rgb(46, 56, 82);
+    font-size: 1em;
+    padding: .5em;
+    color: inherit;
+    border-radius: 5px;
+}
+
+.list-user input[type=checkbox] {
+    width: 2rem
+}
+.list-user:last-child button {
+    margin-bottom: 0;
+    width: 100%;
+    padding: .3rem;
+}
+
+.list-user input:focus {
+    border-color: #596da0;
+}
+
+.btn-del {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
+    padding: .4rem .5rem;
+    margin-right: .5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal design */
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    animation: popup .75s;
+}
+
+.modal .content {
+    margin: 0 auto;
+    align-self: center;
+    padding: 2rem;
+    background-color: black;
+    opacity: 1;
+    position: relative;
+}
+
+.modal #close {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    background-color: black;
+    color: red;
+    padding: .5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.add-form {
+    margin-bottom: .5rem;
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.add-input-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-input-group:last-child {
+    margin-bottom: 0;
+}
+
+.add-input-group label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.add-input-group input, .add-input-group select {
+    outline: none;
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1em;
+    padding: .5em;
+    color: white;
+    border-radius: 5px;
+}
+
+.add-input-group input:focus,
+.add-input-group input:hover,
+.add-input-group select:focus,
+.add-input-group select:hover {
+    border-color: rgb(10, 240, 48);
+}
+/* Modal design */

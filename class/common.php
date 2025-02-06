@@ -1,54 +1,93 @@
 <?php
 include_once 'env.php';
 
-function getPlainBalance($value = '')
-{
-    require_once 'kudisms-php-master/src/Kudisms.php';
+// function getPlainBalance($value = '')
+// {
+//     require_once 'kudisms-php-master/src/Kudisms.php';
+// 
+//     $kudisms = new Kudisms(getenv('JC_EMAIL'), getenv('JC_PASSWORD'), 'JC CONCEPTS');
+// 
+// 
+//     //check sms balance 
+//     $a = $kudisms->checkBalance();
+// 
+// 
+//     //get string after char "{"
+//     $c = substr($a, strpos($a, "{"));
+//     // echo strpos($a, "{");
+//     // echo "$c";
+//     $b = json_decode($c, true);
+//     // print_r($b);
+//     echo $b['symbol'] . $b['balance'];
+// }
 
-    $kudisms = new Kudisms(getenv('JC_EMAIL'), getenv('JC_PASSWORD'), 'JC CONCEPTS');
+function getPlainBalance() {
+    $curl = curl_init();
 
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://my.kudisms.net/api/balance',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array('token' => getenv('SMS_API_KEY')),
+    ));
 
-    //check sms balance 
-    $a = $kudisms->checkBalance();
+    $response = curl_exec($curl);
 
-
-    //get string after char "{"
-    $c = substr($a, strpos($a, "{"));
-    // echo strpos($a, "{");
-    // echo "$c";
-    $b = json_decode($c, true);
-    // print_r($b);
-    echo $b['symbol'] . $b['balance'];
+    curl_close($curl);
+    return '₦' . json_decode($response)->msg;
 }
-// getPlainBalance();
 
-function test_input($data)
-{
+function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
 
-function sendMessage($number, $message)
-{
+// function sendMessages($number, $message)
+// {
+// 
+//     require_once 'kudisms-php-master/src/Kudisms.php';
+// 
+//     $kudisms = new Kudisms(getenv('JC_EMAIL'), getenv('JC_PASSWORD'), 'JC CONCEPTS');
+// 
+//     //check sms balance 
+//     $a = $kudisms->sendsms($number, $message);
+// 
+//     //get string after char "{"
+//     $c = substr($a, strpos($a, "{"));
+// 
+//     $b = json_decode($c, true);
+// 
+//     return $b;
+// }
+function sendMessage($number, $message) {
+    $curl = curl_init();
 
-    require_once 'kudisms-php-master/src/Kudisms.php';
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://my.kudisms.net/api/sms',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array('token' => getenv('SMS_API_KEY'), 'senderID' => 'JCConcepts', 'recipients' => $number, 'message' => $message, 'gateway' => '2'),
+    ));
 
-    $kudisms = new Kudisms(getenv('JC_EMAIL'), getenv('JC_PASSWORD'), 'JC CONCEPTS');
+    $response = curl_exec($curl);
 
-    //check sms balance 
-    $a = $kudisms->sendsms($number, $message);
+    curl_close($curl);
+    return $response;
 
-    //get string after char "{"
-    $c = substr($a, strpos($a, "{"));
-
-    $b = json_decode($c, true);
-
-    return $b;
 }
-function getUrl($value)
-{
+function getUrl($value) {
 
     $obj = json_decode($value);
     if ($obj->status) {
@@ -60,13 +99,12 @@ function getUrl($value)
 }
 
 
-function recordData($phone, $name)
-{
+function recordData($phone, $name) {
 
     $servername = getenv("DB_SERVER");
-    $username = getenv("DB_USERNAME");
-    $password = getenv("DB_PASSWORD");
-    $dbname = getenv("DB_NAME");
+    $username   = getenv("DB_USERNAME");
+    $password   = getenv("DB_PASSWORD");
+    $dbname     = getenv("DB_NAME");
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

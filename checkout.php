@@ -14,10 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
         'email' => "admin@jcconcepts.com",
         'name' => $name,
-        'amount' => "20000",
+        'amount' => "100000",
         'reference' => "search-$name-$rand",
-        // 'callback_url'=>"http://test.co/name/verify.php",
-        'callback_url' => "https://www.jcconcepts.com.ng/verify.php",
+        'callback_url'=>"http://homecruise.com.sa/verify.php",
+        // 'callback_url' => "https://www.jcconcepts.com.ng/verify.php",
         'metadata' => [
             "customer" =>
             [

@@ -1,9 +1,9 @@
- <?php
-    session_start();
-	// session_destroy();
-	// header("location: index.php");
- print_r($_SESSION)
-	exit();
+<?php
+session_start();
+session_destroy();
+header("location: /index.php");
+//  print_r($_SESSION)
+// exit();
 ?>
 
 
@@ -19,7 +19,7 @@
 
 <body>
     <div class="body">
-    <!--     <header>
+        <!--     <header>
             <nav class="navbar container">
                 <a class="navbar-brand" href="index.php">
                     <span class="nav-logo"></span>
@@ -44,7 +44,7 @@
                 <!-- <h1>JC Concept</h1> -->
                 <div class="body-col">
                     <h1 style="font-size: 30px; margin-bottom: 20px; color:#fff; text-align: center;">JC CONCEPTS</h1>
-                    <div style="text-align:center;color:red"><?=$msg;?></div>
+                    <div style="text-align:center;color:red"><?= $msg; ?></div>
                     <form class="login-form" id="login-form" action="index.php" method="POST">
                         <div class="log-input-group">
                             <label>Username:</label>

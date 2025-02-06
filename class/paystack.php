@@ -4,7 +4,7 @@ include_once 'env.php';
 function verify($field)
 {
 
-    $test_token = getenv("TEST_TOKEN");
+    $test_token = getenv("TOKEN");
 
     $url = "https://api.paystack.co/transaction/verify/" . $field;
 
@@ -37,7 +37,7 @@ function verify($field)
 function initialise($field)
 {
 
-    $test_token = $test_token = getenv("TEST_TOKEN");
+    $test_token = $test_token = getenv("TOKEN");
 
 
     $url = "https://api.paystack.co/transaction/initialize";
@@ -65,7 +65,7 @@ function initialise($field)
 }
 function verifyAccount(string $account_num, string $bank_code)
 {
-    $token1 = $test_token = getenv("TEST_TOKEN");
+    $token1 = $test_token = getenv("TOKEN");
 
     $url = "https://api.paystack.co/bank/resolve?account_number=$account_num&bank_code=$bank_code";
     $cu = curl_init();

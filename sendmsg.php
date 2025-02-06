@@ -1,27 +1,20 @@
 <?php
 session_start();
-require_once("class/common.php");
+require_once ("class/common.php");
 
 // define variables and set to empty values
 $message = $phone = $msg = $status = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $phone = test_input($_POST["phone"]);
+    $phone   = test_input($_POST["phone"]);
     $message = test_input($_POST["message"]);
-    $name = test_input($_POST["name"]);
+    $name    = test_input($_POST["name"]);
     if (strlen($phone) > 10) {
 
-        // log user record to db
+        $sta = sendMessage($phone, $message);
         recordData($phone, $name);
+        $status = json_decode($sta)->msg;
 
-        // $sta = sendMessage($phone, $message);
-        // if (isset($sta['status'])){
-        //   $status = "Message sent";
-        // }
-        // else{
-        //   $status = 'Message not sent: '.$sta['error'];
-        // }
-        $status = 'Message not sent';
     } else {
         $status = "Incorrect number, Go back to check";
     }
@@ -55,7 +48,9 @@ session_destroy();
             <div class=" container">
                 <!-- <h1>JC Concept</h1> -->
                 <div class="body-co">
-                    <h1 style="font-size:22px; font-weight:normal;  margin-bottom: 20px; color:#333; text-align: center;"><?php echo $status; ?> </h1>
+                    <h1
+                        style="font-size:22px; font-weight:normal;  margin-bottom: 20px; color:#333; text-align: center;">
+                        <?php echo $status; ?> </h1>
                     <div style="text-align:center;color:red"></div>
                     <div class="detail" id="login-form">
                         <div class="name">Detail

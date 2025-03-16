@@ -54,7 +54,7 @@ require_once('class/common.php');
 
     $desc[22] = "Easily upset; Unconventional; Sensitive; A good person who lives in a folly's paradise; A dreamer of dreams, blinded by illusion and delusion, beclouded by false judgement; Great service to others but failure to please them. Lucky colours ELECTRIC COLOURS, half-shades, half-tones. Example: Moses, Obadare.";
 
-    $desc[23] = "Not narrow-minded; A good mixer; Modern; Charismatie; A good talker, Power of conviction; There is promise of success and help from superiors; Protection by those in high places; Commands respect from others; Great fortune and success; A fortunate type. Lucky colours; GREY white, glistening materials. Gani Adams, Owerri.";
+    $desc[23] = "Not narrow-minded; A good mixer; Modern; Charismatic; A good talker, Power of conviction; There is promise of success and help from superiors; Protection by those in high places; Commands respect from others; Great fortune and success; A fortunate type. Lucky colours; GREY white, glistening materials. Gani Adams, Owerri.";
 
     $desc[24] = "Artistic, Attractive; Music lover; Loving and lovable; Promise of assistance and association of those of high rank and position with one's plans; Favour and gain through love and from the opposite sex; A life of ease and pleasure Lucky colours; BLUE, rose, pink. Example: Chinua Achebe, Roy Chicago, Tinubu, Raji Fashola (RF), Thomas Okoya, Shina Peters (at Mushin).";
 
@@ -68,7 +68,7 @@ require_once('class/common.php');
 
     $desc[29] = "Soft-minded; Creative; Imaginative; Sentimental; But full of uncertainties, treachery and deception by others; Trials. tribulations and unexpected dangers; Unreliable friends; Grief and deception caused by members of the opposite sex. Lucky colours GREEN, cream, white. Example: National Bank of Nigeria, Jonathan, Gbenga Daniel.";
 
-    $desc[30] = "Independent; Ambitious; Organized; Disciplined; Thoughtful deduction; Retrospection; Mental superiority over his fellows, Will rise high in his chosen career; Indifferent to material acquisition; Spends money unselfishly with a detached mind; But he is often sacrificed for the plans or intrigues of others. Lucky colours; PURPLE mauve, violet, blue, crimson, rose. Example: Tunde Idiagbon, Sheu Musa Yar'adua, Ken Saro Wiwa, Alele Williams, Sunny Ade, Saheed Osupa.";
+    $desc[30] = "Independent; Ambitious; Organized; Disciplined; Thoughtful deduction; Retrospection; Mental superiority over his fellows; Will rise high in his chosen career; Indifferent to material acquisition; Spends money unselfishly with a detached mind; But he is often sacrificed for the plans or intrigues of others. Lucky colours; PURPLE mauve, violet, blue, crimson, rose. Example: Tunde Idiagbon, Sheu Musa Yar'adua, Ken Saro Wiwa, Alele Williams, Sunny Ade, Saheed Osupa.";
 
     $desc[31] = "Anticonformist; Individualistic; Sensitive; Self- contained, lonely and isolated from others; Not fortunate from worldly or material standpoint Lucky colours; ELECTRIC COLOURS, half-shades, half tones. Example: Tunji Oyelana, Orlando Julius, Ade Love.";
 
@@ -86,7 +86,7 @@ require_once('class/common.php');
     
     $desc[38] = "Soft-minded; Creative; Imaginative; Sentimental; But full of uncertainties, treachery and deception by others; Trials. tribulations and unexpected dangers; Unreliable friends; Grief and deception caused by members of the opposite sex. Lucky colours GREEN, cream, white. Example: National Bank of Nigeria, Jonathan, Gbenga Daniel.";
 
-    $desc[39] = "Independent; Ambitious; Organized; Disciplined; Thoughtful deduction; Retrospection; Mental superiority over his fellows, Will rise high in his chosen career; Indifferent to material acquisition; Spends money unselfishly with a detached mind; But he is often sacrificed for the plans or intrigues of others. Lucky colours; PURPLE mauve, violet, blue, crimson, rose. Example: Tunde Idiagbon, Sheu Musa Yar'adua, Ken Saro Wiwa, Alele Williams, Sunny Ade, Saheed Osupa.";
+    $desc[39] = "Independent; Ambitious; Organized; Disciplined; Thoughtful deduction; Retrospection; Mental superiority over his fellows; Will rise high in his chosen career; Indifferent to material acquisition; Spends money unselfishly with a detached mind; But he is often sacrificed for the plans or intrigues of others. Lucky colours; PURPLE mauve, violet, blue, crimson, rose. Example: Tunde Idiagbon, Sheu Musa Yar'adua, Ken Saro Wiwa, Alele Williams, Sunny Ade, Saheed Osupa.";
     
     $desc[40] = "Anticonformist; Individualistic; Sensitive; Self- contained, lonely and isolated from others; Not fortunate from worldly or material standpoint Lucky colours; ELECTRIC COLOURS, half-shades, half tones. Example: Tunji Oyelana, Orlando Julius, Ade Love.";
  
@@ -104,7 +104,7 @@ require_once('class/common.php');
    
     $desc[49] = "Anticonformist; Individualistic; Sensitive; Self- contained, lonely and isolated from others; Not fortunate from worldly or material standpoint Lucky colours; ELECTRIC COLOURS, half-shades, half tones. Example: Tunji Oyelana, Orlando Julius, Ade Love.";
 
-    $desc[48] = "Independent; Ambitious; Organized; Disciplined; Thoughtful deduction; Retrospection; Mental superiority over his fellows, Will rise high in his chosen career; Indifferent to material acquisition; Spends money unselfishly with a detached mind; But he is often sacrificed for the plans or intrigues of others. Lucky colours; PURPLE mauve, violet, blue, crimson, rose. Example: Tunde Idiagbon, Sheu Musa Yar'adua, Ken Saro Wiwa, Alele Williams, Sunny Ade, Saheed Osupa.";
+    $desc[48] = "Independent; Ambitious; Organized; Disciplined; Thoughtful deduction; Retrospection; Mental superiority over his fellows; Will rise high in his chosen career; Indifferent to material acquisition; Spends money unselfishly with a detached mind; But he is often sacrificed for the plans or intrigues of others. Lucky colours; PURPLE mauve, violet, blue, crimson, rose. Example: Tunde Idiagbon, Sheu Musa Yar'adua, Ken Saro Wiwa, Alele Williams, Sunny Ade, Saheed Osupa.";
 
 
     $desc[47] = "Soft-minded; Creative; Imaginative; Sentimental; But full of uncertainties, treachery and deception by others; Trials. tribulations and unexpected dangers; Unreliable friends; Grief and deception caused by members of the opposite sex. Lucky colours GREEN, cream, white. Example: National Bank of Nigeria, Jonathan, Gbenga Daniel.";
